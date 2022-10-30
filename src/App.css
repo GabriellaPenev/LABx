@@ -407,7 +407,9 @@ li {
     visibility: visible;
 }
 
-
+.landing img {
+    object-fit: contain;
+}
 
 /* ABOUT PAGE */
 
