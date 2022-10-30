@@ -1,25 +1,40 @@
+import FadeInSection from './FadeInSection';
+import Footer from './Footer';
+import notebook from './notebook.jpg';
+
+
 const Contact = () => {
     return (
         <>
-            <form id="contact-form" action="https://formspree.io/f/mdojgjvq" method="POST">
-                <fieldset>
+        <FadeInSection>
+            <p className="contact-message">We're always looking to connect with arts organizations looking to reimagine and restructure their operating policies to align with their core values. If you're interested in hearing more about our work, or discussing how we can support your organization, drop us a line below.</p>
 
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" name="name" id="name" placeholder="name" maxlength="60" required></input>
+            <div className="contact-container">
+                <img src={notebook} alt="A blank notebook with a plant" />
 
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="email" id="email" placeholder="email" maxlength="60" required></input>
+                <form id="contact-form" action="https://formspree.io/f/mdojgjvq" method="POST">
+                    <fieldset>
 
-                    <label for="submit" class="sr-only">write me a message</label>
-                    <textarea id="submit" name="message" placeholder="write me a message" maxlength="500"
-                        required></textarea>
+                        <label htmlFor="name" className="sr-only">Name</label>
+                        <input type="text" name="name" id="name" placeholder="name" maxLength="60" required></input>
 
-                    <button type="submit" class="submit">Send Message</button>
+                        <label htmlFor="email" className="sr-only">Email</label>
+                        <input type="email" name="email" id="email" placeholder="email" maxLength="60" required></input>
 
-                </fieldset>
-                <p id="form-status"></p>
-            </form>
+                        <label htmlFor="submit" className="sr-only">write message</label>
+                        <textarea id="submit" name="message" placeholder="write message" maxLength="500"
+                            required></textarea>
 
+                        <button type="submit" className="submit">send message</button>
+
+                    </fieldset>
+                    <p id="form-status"></p>
+                </form>
+
+            </div>
+
+            <Footer />
+                </FadeInSection>
         </>
     )
 }

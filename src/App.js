@@ -1,6 +1,7 @@
 import logo from './labxlogo.png';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
+
 import Bios from './Bios';
 import About from './About';
 import Contact from './Contact';
@@ -8,14 +9,13 @@ import Error from './Error';
 
 function App() {
   return (
-    <div className="App">
+    <div className="wrapper">
       <header className="App-header">
         <Link to="/">
           <img src={logo} className="logo" alt="logo" />
         </Link>
-        <h1>Laboratory x</h1>
         <nav>
-          <ul>
+          <ul className='nav-menu'>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -30,6 +30,9 @@ function App() {
             </li>
           </ul>
         </nav>
+
+        {/* <h1>laboratory x is a collective that brings artistic ways of knowing, community solutions, and a holistic perspective to its work with arts organizations.</h1> */}
+
       </header>
       <Routes>
         <Route path="/"/>
