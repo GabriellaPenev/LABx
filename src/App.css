@@ -407,8 +407,37 @@ li {
     visibility: visible;
 }
 
+/* HOME LANDING PAGE */
+
+.landing {
+    position: relative;
+}
+
 .landing img {
     object-fit: contain;
+}
+
+.enter {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    padding: 7px 0;
+    color: #3b3b3b;
+    background-color: #a08c8c;
+    border: 1px solid #3b3b3b;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    box-shadow: rgba(59, 59, 59, 0.3) 3px 3px, rgba(87, 65, 66, 0.3) 6px 6px, rgba(121, 142, 143, 0.2) 9px 9px;
+}
+
+
+.enter:hover {
+    color: white;
+    background-color: #574142;
 }
 
 /* ABOUT PAGE */
@@ -494,6 +523,12 @@ button {
 
 .submit:hover {
     letter-spacing: 0.8px;
+}
+
+/* ERROR PAGE */
+.back-home {
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 

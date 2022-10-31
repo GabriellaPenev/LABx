@@ -3,11 +3,31 @@ import kristina from './kristina.jpg';
 import nidhi from './nidhi.jpg';
 import brendan from './brendan.jpg';
 import Footer from './Footer';
+import { Link, Routes, Route } from 'react-router-dom';
+import About from './About';
+import Contact from './Contact';
+import Error from './Error';
 
 
 const Bios = () => {
     return (
-        <>
+        <div className='wrapper'>
+            <nav>
+                <ul className='nav-menu'>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/bios">Who We Are</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </nav>
             <ul className='bio-container'>
                 <li>
                     <FadeInSection>
@@ -115,7 +135,15 @@ const Bios = () => {
                 </li>
             </ul>
             <Footer />
-        </>
+
+            <Routes>
+                <Route path="/" />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/bios" element={<Bios />} />
+                <Route path="*" element={<Error />} />
+            </Routes>
+        </div>
     )
 }
 
