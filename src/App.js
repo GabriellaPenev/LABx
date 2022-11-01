@@ -20,11 +20,11 @@ function App() {
       {/* <p>laboratory x is a collective that brings artistic ways of knowing, community solutions, and a holistic perspective to its work with arts organizations.</p> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/bios" element={<Bios />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/bios" element={<Bios />}></Route>
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </>
   );

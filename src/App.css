@@ -365,11 +365,13 @@ h2 {
     font-size: clamp(1rem, 6vw, 1.2rem);
     margin: 35px 0;
     text-decoration: underline;
+    font-weight: 400;
 }
 
 h3 {
     font-size: clamp(0.9rem, 3vw, 1rem);
     margin: 25px 0;
+    font-weight: 400;
 }
 
 p,
@@ -422,22 +424,22 @@ li {
     top: 35%;
     left: 50%;
     margin: 0 auto;
+    padding: 0;
     transform: translate(-50%, -50%);
-    width: 160px;
-    padding: 7px 0;
+    width: 120px;
     color: #3b3b3b;
     background-color: #a08c8c;
-    border: 1px solid #3b3b3b;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    transition: 0.5s ease-in-out;
-    box-shadow: rgba(59, 59, 59, 0.3) 3px 3px, rgba(87, 65, 66, 0.3) 6px 6px, rgba(121, 142, 143, 0.2) 9px 9px;
 }
 
+.enter img {
+    transition: 0.3s all ease-in-out;
+}
+.enter img:hover {
+    transform: translateY(-6px);
+}
 
-.enter:hover {
-    color: white;
-    background-color: #574142;
+.enter:focus {
+    outline: none;
 }
 
 /* ABOUT PAGE */
@@ -500,8 +502,8 @@ input {
 select,
 input,
 textarea {
-    font-size: clamp(0.8rem, 1vw, 1rem);
-    font-family: inherit;
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
     border-radius: 15px;
     border: none;
     padding: 5px 15px;
