@@ -3,6 +3,7 @@ import Footer from './Footer';
 import notebook from './notebook.jpg';
 import { Link, Routes, Route } from 'react-router-dom';
 import Bios from './Bios';
+import Strengths from './Strengths';
 import About from './About';
 import Error from './Error';
 
@@ -19,6 +20,9 @@ const Contact = () => {
                     </li>
                     <li>
                         <Link to="/bios">Who We Are</Link>
+                    </li>
+                    <li>
+                        <Link to="/strengths">Our Strengths</Link>
                     </li>
                     <li>
                         <Link to="/contact">Contact</Link>
@@ -53,12 +57,15 @@ const Contact = () => {
                 </div>
 
                 <Footer />
+
             </FadeInSection>
+
 
             <Routes>
                 <Route path="/" />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/strengths" element={<Strengths />}></Route>
                 <Route path="/bios" element={<Bios />} />
                 <Route path="*" element={<Error />} />
             </Routes>
@@ -67,3 +74,4 @@ const Contact = () => {
 }
 
 export default Contact;
+

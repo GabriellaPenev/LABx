@@ -376,7 +376,7 @@ h3 {
 
 p,
 li {
-    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
 }
 
 .logo {
@@ -413,27 +413,117 @@ li {
 
 .landing {
     position: relative;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    overflow-x: clip;
 }
 
-.landing img {
+.landing p {
+    width: 90%;
+    margin: 0 auto;
+    position: inherit;
+    z-index: 20;
+}
+
+/* .landing img {
     object-fit: contain;
+    /* height: 60vh; */
+
+.leftCircle,
+.rightCircle,
+.arts,
+.systems,
+.change {
+    position: absolute;
+    border: none;
+}
+
+.leftCircle {
+    top: 90px;
+    left: -100px;
+    width: 19rem;
+    height: 19rem;
+    background-color: #574142;
+    border-radius: 50%;
+}
+
+.rightCircle {
+    top: 40px;
+    right: -100px;
+    width: 20rem;
+    height: 20rem;
+    background-color: #8d8d8d;
+    border-radius: 50%;
+}
+
+.arts {
+    left: -60px;
+    top: 185px;
+    z-index: 10;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-radius: 0;
+    width: 15rem;
+}
+
+.systems {
+    right: -60px;
+    top: 231px;
+    z-index: 10;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-radius: 0;
+    width: 15rem;
+    text-align: start;
+}
+
+.change {
+    left: 50%;
+    top: 280px;
+    margin: 0 auto;
+    z-index: 10;
+    border-left: 30px solid transparent;
+    border-right: 90px solid transparent;
+    border-radius: 0;
+}
+
+.arts p,
+.systems p,
+.change p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: rgb(194, 194, 194);
+}
+
+.arts {
+    animation: animateArts 12s infinite, animateBorder 24s infinite;
+}
+
+.systems {
+    animation: animateSystems 12s infinite, animateBorder 24s infinite;
+}
+
+.change {
+    animation: animateChange 12s infinite, animateBorder 24s infinite;
 }
 
 .enter {
     position: absolute;
-    top: 35%;
+    bottom: -150px;
     left: 50%;
     margin: 0 auto;
     padding: 0;
     transform: translate(-50%, -50%);
     width: 120px;
     color: #3b3b3b;
-    background-color: #a08c8c;
+    background-color: transparent;
 }
 
 .enter img {
     transition: 0.3s all ease-in-out;
 }
+
 .enter img:hover {
     transform: translateY(-6px);
 }
@@ -547,5 +637,166 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    /* margin-bottom: 15px; */
+    padding-bottom: 10px;
+}
+
+@keyframes animateBorder {
+    0% {
+        border-top: 20px solid #55778d8f;
+    }
+
+    30% {
+        border-top: 20px solid #789d919d;
+    }
+    
+    60% {
+        border-top: 20px solid #64607288;
+    }
+    
+    90% {
+        border-top: 20px solid  #fcc71a91;
+    }
+}
+
+@keyframes animateArts {
+
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes animateChange {
+
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    100% { 
+        opacity: 0;
+    }
+}
+
+@keyframes animateSystems {
+
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% { 
+        opacity: 0;
+    }
+}
+
+
+
+/* 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+    
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} */
+
+/* MEDIA QUERIES */
+
+@media (max-width: 680px) {
+
+
+    .enter {
+        width: 90px;
+        top: 150px;
+    }
+
 }
