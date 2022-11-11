@@ -497,15 +497,15 @@ li {
 }
 
 .arts {
-    animation: animateArts 12s infinite, animateBorder 8s infinite;
+    animation: animateArts 12s infinite, animateBorder 6s infinite;
 }
 
 .systems {
-    animation: animateSystems 12s infinite, animateBorder 9s infinite;
+    animation: animateSystems 12s infinite, animateBorder 7s infinite;
 }
 
 .change {
-    animation: animateChange 12s infinite, animateBorder 10s infinite;
+    animation: animateChange 12s infinite, animateBorder 8s infinite;
 }
 
 .arts p:hover,
@@ -608,6 +608,8 @@ fieldset {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 textarea {
@@ -627,8 +629,12 @@ textarea {
     font-family: 'Inter', sans-serif;
     border-radius: 15px;
     border: none;
-    padding: 5px 15px;
+    padding: 8px 15px;
     margin: 8px;
+}
+
+input[type=text]{
+    margin-top: 0;
 }
 
 button {
@@ -675,6 +681,8 @@ footer {
     right: 0;
     padding-bottom: 10px;
 }
+
+/* ANIMATIONS */
 
 @keyframes animateBorder {
     0% {
