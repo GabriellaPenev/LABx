@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import About from './About';
-// import landing from './landing5.png';
-import enterbutton from './enter-button.png';
+import enterbutton from '../assets/enter-button.png';
 
 const Home = () => {
     return (

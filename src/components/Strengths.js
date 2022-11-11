@@ -1,11 +1,10 @@
-import FadeInSection from './FadeInSection';
-import Footer from './Footer';
-import notebook from './notebook.jpg';
 import { Link, Routes, Route } from 'react-router-dom';
 import Bios from './Bios';
-import Contact from './Contact';
 import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
 import Error from './Error';
+import FadeInSection from './FadeInSection';
 
 const Strengths = () => {
     return (
@@ -29,7 +28,6 @@ const Strengths = () => {
                     </li>
                 </ul>
             </nav>
-           
                 <FadeInSection>
                     <h2>
                         Selected Service Offerings

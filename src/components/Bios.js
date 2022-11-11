@@ -1,13 +1,13 @@
-import FadeInSection from './FadeInSection';
-import kristina from './kristina.jpg';
-import nidhi from './nidhi.jpg';
-import brendan from './brendan.jpg';
-import Footer from './Footer';
 import { Link, Routes, Route } from 'react-router-dom';
+import FadeInSection from './FadeInSection';
 import About from './About';
 import Strengths from './Strengths';
 import Contact from './Contact';
+import Footer from './Footer';
 import Error from './Error';
+import kristina from '../assets/kristina.jpg';
+import nidhi from '../assets/nidhi.jpg';
+import brendan from '../assets/brendan.jpg';
 
 
 const Bios = () => {
@@ -35,14 +35,13 @@ const Bios = () => {
             <ul className='bio-container'>
                 <li>
                     <FadeInSection>
-                        <div className='bio-pic'>
+                        <div className='bio-pic kristina'>
                             <img src={kristina} alt="Headshot of Kristina" />
                         </div>
-
+                        <h3>Kristina Lemieux</h3>
                     </FadeInSection>
                     <FadeInSection>
                         <div className="bio-text">
-                            <h3>Kristina Lemieux</h3>
                             <p>
                                 Kristina Lemieux is a contemporary dancer and accomplished arts manager with more than
                                 20 years of professional experience across Canada. In all that she does, Kristina works to
@@ -70,13 +69,13 @@ const Bios = () => {
                 </li>
                 <li>
                     <FadeInSection>
-                        <div className="bio-pic">
+                        <div className="bio-pic nidhi">
                             <img src={nidhi} alt="Headshot of Nidhi" />
                         </div>
+                        <h3>Nidhi Khanna, M.A., M.B.A.</h3>
                     </FadeInSection>
                     <FadeInSection>
                         <div className="bio-text">
-                            <h3>Nidhi Khanna, M.A., M.B.A.</h3>
                             <p>
                                 Nidhi Khanna brings 20 years of experience in cultural production, creative programming,
                                 venue operations and social enterprise management to the social impact, non-profit and
@@ -103,13 +102,13 @@ const Bios = () => {
                 </li>
                 <li>
                     <FadeInSection>
-                        <div className="bio-pic">
+                        <div className="bio-pic brendan">
                             <img src={brendan} alt="Headshot of Brendan" />
                         </div>
+                        <h3>Brendan McMurtry-Howlett, M.A.</h3>
                     </FadeInSection>
                     <FadeInSection>
                         <div className="bio-text">
-                            <h3>Brendan McMurtry-Howlett, M.A.</h3>
                             <p>
                                 Brendan was born and raised in the territory governed by the Dish-with-One-Spoon treaty
                                 (Tkaronto/Toronto), established between the Anishinaabe, Mississaugas, and the

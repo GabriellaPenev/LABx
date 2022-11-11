@@ -1,13 +1,67 @@
-import FadeInSection from './FadeInSection';
-import Footer from './Footer';
-import notebook from './notebook.jpg';
 import { Link, Routes, Route } from 'react-router-dom';
+import FadeInSection from './FadeInSection';
 import Bios from './Bios';
-import Strengths from './Strengths';
 import About from './About';
+import Strengths from './Strengths';
+import Footer from './Footer';
 import Error from './Error';
+import notebook from '../assets/notebook.jpg';
+import { useForm } from '@formspree/react';
 
 const Contact = () => {
+
+    const [submit, setSubmit] = useForm('mdojgjvq');
+    if (submit.succeeded) {
+        return (
+            <>
+
+                <div className='wrapper'>
+                    <nav>
+                        <ul className='nav-menu'>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/bios">Who We Are</Link>
+                            </li>
+                            <li>
+                                <Link to="/strengths">Our Strengths</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact">Contact</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <FadeInSection>
+                        <div className="contact-container">
+
+                            <img src={notebook} alt="A blank notebook with a plant" />
+                            <p className='successful-submit'>Thank you for your message! We'll be in touch soon.</p>
+
+                        </div>
+
+                        <Footer />
+
+                    </FadeInSection>
+
+
+                    <Routes>
+                        <Route path="/" />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/strengths" element={<Strengths />}></Route>
+                        <Route path="/bios" element={<Bios />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                </div>
+
+            </>
+        )
+    }
+
     return (
         <div className='wrapper'>
             <nav>
@@ -35,7 +89,7 @@ const Contact = () => {
                 <div className="contact-container">
                     <img src={notebook} alt="A blank notebook with a plant" />
 
-                    <form id="contact-form" action="https://formspree.io/f/mdojgjvq" method="POST">
+                    <form onSubmit={setSubmit}>
                         <fieldset>
 
                             <label htmlFor="name" className="sr-only">Name</label>
@@ -48,10 +102,9 @@ const Contact = () => {
                             <textarea id="submit" name="message" placeholder="write message" maxLength="500"
                                 required></textarea>
 
-                            <button type="submit" className="submit">send message</button>
+                            <button type="submit" className="submit" disabled={submit.submitting}>send message</button>
 
                         </fieldset>
-                        <p id="form-status"></p>
                     </form>
 
                 </div>

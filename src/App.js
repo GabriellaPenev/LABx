@@ -1,13 +1,12 @@
-import logo from './labxlogo.png';
-import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
-
-import Home from './Home';
-import Bios from './Bios';
-import About from './About';
-import Strengths from './Strengths';
-import Contact from './Contact';
-import Error from './Error';
+import './App.css';
+import Home from './components/Home';
+import Bios from './components/Bios';
+import About from './components/About';
+import Strengths from './components/Strengths';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import logo from './assets/labxlogo.png';
 
 function App() {
   return (

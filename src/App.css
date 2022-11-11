@@ -370,7 +370,7 @@ h2 {
 
 h3 {
     font-size: clamp(0.9rem, 3vw, 1rem);
-    margin: 25px 0;
+    margin: 15px 0 0;
     font-weight: 400;
 }
 
@@ -426,10 +426,6 @@ li {
     z-index: 20;
 }
 
-/* .landing img {
-    object-fit: contain;
-    /* height: 60vh; */
-
 .leftCircle,
 .rightCircle,
 .arts,
@@ -446,6 +442,7 @@ li {
     height: 19rem;
     background-color: #574142;
     border-radius: 50%;
+    opacity: 0.95;
 }
 
 .rightCircle {
@@ -455,6 +452,8 @@ li {
     height: 20rem;
     background-color: #8d8d8d;
     border-radius: 50%;
+    opacity: 0.95;
+
 }
 
 .arts {
@@ -492,20 +491,28 @@ li {
 .systems p,
 .change p {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
     color: rgb(194, 194, 194);
+    transition: 0.7s ease-in-out all;
 }
 
 .arts {
-    animation: animateArts 12s infinite, animateBorder 24s infinite;
+    animation: animateArts 12s infinite, animateBorder 8s infinite;
 }
 
 .systems {
-    animation: animateSystems 12s infinite, animateBorder 24s infinite;
+    animation: animateSystems 12s infinite, animateBorder 9s infinite;
 }
 
 .change {
-    animation: animateChange 12s infinite, animateBorder 24s infinite;
+    animation: animateChange 12s infinite, animateBorder 10s infinite;
+}
+
+.arts p:hover,
+.systems p:hover,
+.change p:hover {
+    transform: scale(1.1);
+    letter-spacing: 2px;
 }
 
 .enter {
@@ -521,11 +528,11 @@ li {
 }
 
 .enter img {
-    transition: 0.3s all ease-in-out;
+    transition: 0.5s all ease-in-out;
 }
 
 .enter img:hover {
-    transform: translateY(-6px);
+    transform: scale(1.1);
 }
 
 .enter:focus {
@@ -538,13 +545,36 @@ li {
     display: flex;
 }
 
+.bio-container h3 {
+    text-align: center;
+}
+
 .bio-container li {
     margin: 0 10px;
     width: calc((100% / 3) - 20px);
 }
 
+.bio-pic {
+    transition: 0.7s ease-in-out all;
+    border: 0.1px solid #a08c8c;
+}
+
+.kristina:hover {
+    border: 15px solid #fcc71a60;
+}
+
+.nidhi:hover {
+    border: 15px solid #55778d8f;
+}
+
+.brendan:hover {
+    border: 15px solid #789d919d;
+}
+
 .bio-text {
     font-size: 0.8rem;
+    text-align: center;
+    line-height: 22px;
 }
 
 .values {
@@ -560,6 +590,7 @@ li {
 
 .contact-container {
     display: flex;
+    justify-content: space-between;
 }
 
 .contact-container img,
@@ -592,7 +623,7 @@ input {
 select,
 input,
 textarea {
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 3vw, 0.8rem);
     font-family: 'Inter', sans-serif;
     border-radius: 15px;
     border: none;
@@ -615,6 +646,11 @@ button {
 
 .submit:hover {
     letter-spacing: 0.8px;
+}
+
+.successful-submit {
+    font-size: 1rem;
+    padding-top: 20px;
 }
 
 /* ERROR PAGE */
@@ -645,16 +681,20 @@ footer {
         border-top: 20px solid #55778d8f;
     }
 
-    30% {
+    25% {
         border-top: 20px solid #789d919d;
     }
-    
-    60% {
-        border-top: 20px solid #64607288;
+
+    50% {
+        border-top: 20px solid #646072cb;
     }
-    
-    90% {
-        border-top: 20px solid  #fcc71a91;
+
+    75% {
+        border-top: 20px solid #fcc71a60;
+    }
+
+    100% {
+        border-top: 20px solid #55778d8f;
     }
 }
 
@@ -664,34 +704,15 @@ footer {
         opacity: 0;
     }
 
-    15% {
+    20% {
         opacity: 1;
     }
 
-    25% {
+    55% {
         opacity: 1;
     }
 
-    100% { 
-        opacity: 0;
-    }
-}
-
-@keyframes animateChange {
-
-    0% {
-        opacity: 0;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    65% {
-        opacity: 1;
-    }
-
-    100% { 
+    100% {
         opacity: 0;
     }
 }
@@ -706,39 +727,7 @@ footer {
         opacity: 1;
     }
 
-    40% {
-        opacity: 1;
-    }
-
-    100% { 
-        opacity: 0;
-    }
-}
-
-
-
-/* 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-    
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
+    75% {
         opacity: 1;
     }
 
@@ -747,49 +736,55 @@ footer {
     }
 }
 
-@-webkit-keyframes fadeIn {
+
+@keyframes animateChange {
+
     0% {
         opacity: 0;
     }
 
-    50% {
+    60% {
         opacity: 1;
+    }
+
+    85% {
+        opacity: 0.5;
     }
 
     100% {
         opacity: 0;
     }
 }
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-} */
 
 /* MEDIA QUERIES */
+
+@media (max-width: 880px) {
+    .logo {
+        width: 45%;
+        margin-top: 30px;
+    }
+
+    .wrapper {
+        width: 95%;
+    }
+
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+
+    .contact-container img,
+    .contact-container form {
+        width: 100%;
+    }
+
+    fieldset {
+        padding: 0 0 10px 0;
+    }
+
+    .contact-message {
+        margin-bottom: 20px;
+        }
+}
 
 @media (max-width: 680px) {
 
@@ -797,6 +792,52 @@ footer {
     .enter {
         width: 90px;
         top: 150px;
+    }
+
+    .bio-container {
+        flex-direction: column;
+    }
+
+    .bio-container li {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .logo {
+        width: 65%;
+        margin-top: 20px;
+    }
+
+    .landing {
+        margin-top: 20px;
+    }
+
+    .bio-container li {
+        width: 100%;
+    }
+
+    .kristina {
+        border: 15px solid #fcc71a60;
+    }
+
+    .nidhi {
+        border: 15px solid #55778d8f;
+    }
+
+    .brendan {
+        border: 15px solid #789d919d;
+    }
+
+    .submit {
+        width: 100%;
     }
 
 }
