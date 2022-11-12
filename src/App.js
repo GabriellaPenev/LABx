@@ -9,6 +9,7 @@ import Error from './components/Error';
 import logo from './assets/labxlogo.png';
 
 function App() {
+
   return (
     <>
       <header className="wrapper App-header">

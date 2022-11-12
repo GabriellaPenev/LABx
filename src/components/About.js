@@ -1,34 +1,12 @@
 import FadeInSection from './FadeInSection';
+import Nav from './Nav';
 import Footer from './Footer';
-import { Link, Routes, Route } from 'react-router-dom';
-import Bios from './Bios';
-import Strengths from './Strengths';
-import Contact from './Contact';
-import Error from './Error';
 
 const About = () => {
     return (
         <div className='wrapper'>
             <div>
-                <nav>
-                    <ul className='nav-menu'>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/bios">Who We Are</Link>
-                        </li>
-                        <li>
-                            <Link to="/strengths">Our Strengths</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
-                </nav>
+                <Nav />
                 <FadeInSection>
                     <h2>About LABx</h2>
                     <p>We envision an arts ecology that embraces collectivity and interdependence. We envision
@@ -50,17 +28,7 @@ const About = () => {
                     </ul>
                 </FadeInSection>
             </div>
-
             <Footer />
-
-            <Routes>
-                <Route path="/" />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/strengths" element={<Strengths />}></Route>
-                <Route path="/bios" element={<Bios />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
         </div>
     )
 }

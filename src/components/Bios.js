@@ -1,10 +1,6 @@
-import { Link, Routes, Route } from 'react-router-dom';
 import FadeInSection from './FadeInSection';
-import About from './About';
-import Strengths from './Strengths';
-import Contact from './Contact';
+import Nav from './Nav';
 import Footer from './Footer';
-import Error from './Error';
 import kristina from '../assets/kristina.jpg';
 import nidhi from '../assets/nidhi.jpg';
 import brendan from '../assets/brendan.jpg';
@@ -13,25 +9,7 @@ import brendan from '../assets/brendan.jpg';
 const Bios = () => {
     return (
         <div className='wrapper'>
-            <nav>
-                <ul className='nav-menu'>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/bios">Who We Are</Link>
-                    </li>
-                    <li>
-                        <Link to="/strengths">Our Strengths</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+            <Nav />
             <ul className='bio-container'>
                 <li>
                     <FadeInSection>
@@ -139,14 +117,6 @@ const Bios = () => {
             </ul>
             <Footer />
 
-            <Routes>
-                <Route path="/" />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/strengths" element={<Strengths />}></Route>
-                <Route path="/bios" element={<Bios />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
         </div>
     )
 }

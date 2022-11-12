@@ -1,33 +1,11 @@
-import { Link, Routes, Route } from 'react-router-dom';
-import Bios from './Bios';
-import About from './About';
-import Contact from './Contact';
+import Nav from './Nav';
 import Footer from './Footer';
-import Error from './Error';
 import FadeInSection from './FadeInSection';
 
 const Strengths = () => {
     return (
         <div className='wrapper'>
-            <nav>
-                <ul className='nav-menu'>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li>
-                        <Link to="/bios">Who We Are</Link>
-                    </li>
-                    <li>
-                        <Link to="/strengths">Our Strengths</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
+            <Nav />
                 <FadeInSection>
                     <h2>
                         Selected Service Offerings
@@ -85,18 +63,7 @@ const Strengths = () => {
                             role.</p>
                     </div>
                 </FadeInSection>
-        
             <Footer />
-
-
-            <Routes>
-                <Route path="/" />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/strengths" element={<Strengths />}></Route>
-                <Route path="/bios" element={<Bios />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
         </div>
     )
 }
