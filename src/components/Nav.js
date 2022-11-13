@@ -29,9 +29,7 @@ const Nav = () => {
                         <div className={listButton ? 'line2Active spinner diagonal part-2' : 'spinner diagonal part-2'}></div>
                     </button>
 
-
-                </div>
-                <div className={listButton ? 'listPanel panelActive' : 'listPanel'}>
+                    <div className={listButton ? 'listPanel panelActive' : 'listPanel'}>
                     <ul className='nav-menu'>
                         <li>
                             <Link to="/">Home</Link>
@@ -50,6 +48,8 @@ const Nav = () => {
                         </li>
                     </ul>
                 </div>
+                </div>
+               
             </nav>
 
             <Routes>

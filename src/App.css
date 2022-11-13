@@ -273,6 +273,7 @@ html {
     color: #3b3b3b;
     background-color: #a08c8c;
     scroll-behavior: smooth;
+    overflow-x:  hidden;
 }
 
 .wrapper {
@@ -400,6 +401,12 @@ li {
 }
 
 /* NAV MENU */
+
+.listPanel {
+    position: fixed;
+    top: 110px;
+    right: 18px;
+}
 
 .nav-menu {
     display: flex;
@@ -915,7 +922,7 @@ footer {
         position: fixed;
         background-color: #55778d;
         right: -28px;
-        top: -145px;
+        top: -115px;
         margin: 0;
         border-top: 80px solid #55778d;
     }
@@ -940,10 +947,6 @@ footer {
     .panelActive {
         transform: translateX(0);
     }
-
-    /* .listHidden {
-        visibility: hidden;
-    } */
 
     .bio-container li {
         width: 100%;
