@@ -14,7 +14,9 @@ function App() {
     <>
       <header className="wrapper App-header">
         <Link to="/">
-          <img src={logo} className="logo" alt="logo" />
+          <h1>
+            <img src={logo} className="logo" alt="logo" />
+          </h1>
         </Link>
       </header>
 

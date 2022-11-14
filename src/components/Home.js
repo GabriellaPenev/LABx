@@ -7,8 +7,6 @@ const Home = () => {
         <>
             <div className="landing">
                 <p>Labx is a collaborative consultancy of arts professionals. We envision a sector that embraces collectivity, interdependence, and risk taking.</p>
-            
-                {/* <img src={landing} alt="overlapping maroon, blue, and grey circles" /> */}
                 <div className="leftCircle"></div>
                 <div className="rightCircle"></div>
                 <div className="arts"><p>arts</p></div>

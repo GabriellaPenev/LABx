@@ -375,9 +375,10 @@ h3 {
     font-weight: 400;
 }
 
-p,
+p, 
 li {
-    font-size: clamp(0.75rem, 2vw, 0.85rem);
+        line-height: 22px;
+        font-size: clamp(0.8rem, 2vw, 0.85rem);
 }
 
 .logo {
@@ -410,6 +411,8 @@ li {
 
 .nav-menu li {
     padding: 20px 15px 20px;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+
 }
 
 .listPanelToggle {
@@ -640,9 +643,7 @@ li {
 }
 
 .bio-text {
-    font-size: 0.8rem;
     text-align: center;
-    line-height: 22px;
 }
 
 .values {
@@ -712,7 +713,7 @@ input {
 select,
 input,
 textarea {
-    font-size: clamp(0.7rem, 3vw, 0.8rem);
+    font-size: clamp(0.75rem, 3vw, 0.8rem);
     font-family: 'Inter', sans-serif;
     border-radius: 15px;
     border: none;
