@@ -1,11 +1,10 @@
 import { Link, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import Bios from './Bios';
 import About from './About';
 import Contact from './Contact'
 import Strengths from './Strengths';
 import Error from './Error';
-import { useState } from 'react';
-
 
 const Nav = () => {
 
@@ -30,27 +29,27 @@ const Nav = () => {
                     </button>
 
                     <div className={listButton ? 'listPanel panelActive' : 'listPanel'}>
-                    <ul className='nav-menu'>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/bios">Who We Are</Link>
-                        </li>
-                        <li>
-                            <Link to="/strengths">Our Strengths</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
-                        </li>
-                    </ul>
+                        <ul className='nav-menu'>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/bios">Who We Are</Link>
+                            </li>
+                            <li>
+                                <Link to="/strengths">Our Strengths</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact">Contact</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
-               
             </nav>
+
 
             <Routes>
                 <Route path="/" />

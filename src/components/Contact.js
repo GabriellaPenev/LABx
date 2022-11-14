@@ -21,7 +21,6 @@ const Contact = () => {
                         <Footer />
                     </FadeInSection>
                 </div>
-
             </>
         )
     }
