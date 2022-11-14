@@ -38,9 +38,8 @@ const Contact = () => {
             <Nav />
             <FadeInSection>
                 <div className="contact-message">
-                    <p>We're always looking to connect with arts organizations looking to reimagine and restructure their operating policies to align with their core values. </p>
-                    <p>
-                        If you're interested in hearing more about our work, or discussing how we can support your organization, drop us a line below.
+                    <p>We're looking to connect with arts organizations that seek to reimagine their operating policies to align with their core values. 
+                        If you're interested in learning more about our work, or discussing how we can support your organization, drop us a line below.
                     </p>
                 </div>
 
