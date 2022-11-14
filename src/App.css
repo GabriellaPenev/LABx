@@ -661,13 +661,25 @@ li {
     justify-content: space-between;
 }
 
-.contact-container img,
-.contact-container form {
+.contact-image,
+form {
     width: 50%;
 }
 
-.contact-container img {
+.contact-image {
+    position: relative;
+}
+
+.contact-image img {
     border-radius: 15px;
+}
+
+.instagram {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 15px;
 }
 
 fieldset {
@@ -838,21 +850,12 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 880px) {
-    .logo {
-        width: 45%;
-        margin-top: 30px;
-    }
-
-    .wrapper {
-        width: 95%;
-    }
-
+@media (max-width: 1080px) {
     .contact-container {
         flex-direction: column-reverse;
     }
 
-    .contact-container img,
+    .contact-image,
     .contact-container form {
         width: 100%;
     }
@@ -863,6 +866,17 @@ footer {
 
     .contact-message {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 880px) {
+    .logo {
+        width: 45%;
+        margin-top: 30px;
+    }
+
+    .wrapper {
+        width: 95%;
     }
 }
 

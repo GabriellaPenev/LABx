@@ -4,6 +4,9 @@ import Footer from './Footer';
 import notebook from '../assets/notebook.jpg';
 import { useForm } from '@formspree/react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 const Contact = () => {
 
     const [submit, setSubmit] = useForm('mdojgjvq');
@@ -17,6 +20,11 @@ const Contact = () => {
                         <div className="contact-container">
                             <img src={notebook} alt="A blank notebook with a plant" />
                             <p className='successful-submit'>Thank you for your message! We'll be in touch soon.</p>
+                        </div>
+                        <div>
+                            <a href='https://www.instagram.com/labximpact/?hl=en'>
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
                         </div>
                         <Footer />
                     </FadeInSection>
@@ -32,7 +40,15 @@ const Contact = () => {
                 <p className="contact-message">We're always looking to connect with arts organizations looking to reimagine and restructure their operating policies to align with their core values. If you're interested in hearing more about our work, or discussing how we can support your organization, drop us a line below.</p>
 
                 <div className="contact-container">
-                    <img src={notebook} alt="A blank notebook with a plant" />
+                    <div className="contact-image">
+                        <img src={notebook} alt="A blank notebook with a plant" />
+
+                        <div className='instagram'>
+                            <a href='https://www.instagram.com/labximpact/?hl=en' target='_blank' rel='noopener noreferrer'>
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                        </div>
+                    </div>
 
                     <form onSubmit={setSubmit}>
                         <fieldset>
@@ -51,9 +67,7 @@ const Contact = () => {
 
                         </fieldset>
                     </form>
-
                 </div>
-
                 <Footer />
             </FadeInSection>
         </div>
