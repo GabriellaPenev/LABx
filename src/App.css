@@ -488,7 +488,7 @@ li {
 }
 
 .landing p {
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
     position: inherit;
     z-index: 20;
@@ -895,6 +895,10 @@ footer {
         top: 150px;
     }
 
+    .landing p {
+        width: 90%;
+    }
+    
     .bio-container {
         flex-direction: column;
     }
@@ -919,6 +923,10 @@ footer {
 
     .landing {
         margin-top: 20px;
+    }
+
+    .enter {
+        top: 125px;
     }
 
     nav ul a:hover:before,
