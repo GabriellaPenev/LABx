@@ -273,7 +273,7 @@ html {
     color: #3b3b3b;
     background-color: #a08c8c;
     scroll-behavior: smooth;
-    overflow-x:  hidden;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -358,8 +358,8 @@ p {
 }
 
 h1 {
-    font-size: clamp(01rem, 7vw, 1.5rem);
-    /* need to add this back in later as it's commented out */
+    font-size: clamp(1rem, 7vw, 1.5rem);
+    /* THERE IS NO h1 YET.. MAY NEED TO CHANGE THIS IF HEADER IS IMG */
 }
 
 h2 {
@@ -377,7 +377,7 @@ h3 {
 
 p,
 li {
-    font-size: clamp(0.7rem, 2vw, 0.85rem);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
 }
 
 .logo {
@@ -431,7 +431,7 @@ li {
     position: fixed;
     height: 3px;
     width: 25px;
-    background-color: black;
+    background-color: #3b3b3b;
 }
 
 .horizontal {
@@ -510,17 +510,17 @@ li {
     height: 19rem;
     background-color: #574142;
     border-radius: 50%;
-    opacity: 0.95;
+    opacity: 0.8;
 }
 
 .rightCircle {
-    top: 40px;
+    top: 33px;
     right: -100px;
     width: 20rem;
     height: 20rem;
-    background-color: #8d8d8d;
+    background-color: #808789;
     border-radius: 50%;
-    opacity: 0.95;
+    opacity: 0.8;
 
 }
 
@@ -654,6 +654,7 @@ li {
 
 .contact-message {
     margin-bottom: 45px;
+    text-align: center;
 }
 
 .contact-container {
@@ -680,6 +681,12 @@ form {
     position: absolute;
     top: 10px;
     left: 15px;
+    transition: 0.3s ease-in-out all;
+}
+
+.instagram:hover,
+.instagram:focus {
+    color: #808789;
 }
 
 fieldset {
@@ -914,12 +921,23 @@ footer {
         margin-top: 20px;
     }
 
+    nav ul a:hover:before,
+    nav ul a:focus:before,
+    footer span a:focus:before,
+    footer span a:hover:before {
+        width: 0%;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
     /* MOBILE NAV */
 
     .listPanel {
         position: fixed;
         top: 110px;
-        right: 18px;
+        right: 16px;
         z-index: 10;
         transform: translateX(300px);
         width: 100%;
@@ -938,11 +956,14 @@ footer {
         flex-direction: column;
         width: 180px;
         position: fixed;
-        background-color: #55778d;
-        right: -28px;
+        background-color: #808789;
+        right: -16px;
         top: -115px;
         margin: 0;
-        border-top: 80px solid #55778d;
+        border-top: 60px solid #808789;
+        border-bottom: 30px solid #808789;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
     }
 
     .nav-menu li {
@@ -954,7 +975,7 @@ footer {
     .listPanelToggle {
         visibility: visible;
     }
-    
+
     .panelActive {
         transform: translateX(0);
     }
@@ -979,14 +1000,4 @@ footer {
         width: 100%;
     }
 
-}
-
-@media (max-width: 420px){
-
-    .nav-menu {
-        width: 180px;
-        top: -115px;
-        margin: 0;
-        border-top: 80px solid #55778d;
-    }
 }
