@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
             <div className="landing">
-                <p>Labx is a collaborative consultancy of arts professionals. We envision a sector that embraces collectivity, interdependence, and risk taking.</p>
+                <p>LABx is a collaborative consultancy of arts professionals. We envision a sector that embraces collectivity, interdependence, and risk-taking.</p>
                 <div className="leftCircle"></div>
                 <div className="rightCircle"></div>
                 <div className="arts"><p>arts</p></div>

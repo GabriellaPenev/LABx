@@ -17,6 +17,7 @@ const Contact = () => {
                 <div className='wrapper'>
                     <Nav />
                     <FadeInSection>
+                    <h2>Get In Touch</h2>
                         <div className="contact-container">
                             <img src={notebook} alt="A blank notebook with a plant" />
                             <p className='successful-submit'>Thank you for your message! We'll be in touch soon.</p>
@@ -36,7 +37,9 @@ const Contact = () => {
     return (
         <div className='wrapper'>
             <Nav />
+
             <FadeInSection>
+            <h2>Get In Touch</h2>
                 <div className="contact-message">
                     <p>We're looking to connect with arts organizations that seek to reimagine their operating policies to align with their core values. 
                         If you're interested in learning more about our work, or discussing how we can support your organization, drop us a line below.

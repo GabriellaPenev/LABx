@@ -364,8 +364,7 @@ h1 {
 
 h2 {
     font-size: clamp(1rem, 6vw, 1.2rem);
-    margin: 35px 0;
-    text-decoration: underline;
+    margin: 35px 0 20px;
     font-weight: 400;
 }
 
@@ -610,7 +609,20 @@ li {
     outline: none;
 }
 
+
 /* ABOUT PAGE */
+
+.values {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+.contact-link {
+    text-decoration: underline;
+    padding-top: 30px;
+}
+
+/* BIO PAGE */
 
 .bio-container {
     display: flex;
@@ -623,6 +635,13 @@ li {
 .bio-container li {
     margin: 0 10px;
     width: calc((100% / 3) - 20px);
+}
+
+.pronouns {
+    display: block;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    padding-top: 5px;
+    font-weight: 300;
 }
 
 .bio-pic {
@@ -646,16 +665,16 @@ li {
     text-align: center;
 }
 
-.values {
-    list-style: circle;
-    padding-left: 20px;
+/* OUR STRENGTHS */
+
+.strength-list li {
+    line-height: 1.5rem;
 }
 
 /* CONTACT PAGE */
 
 .contact-message {
     margin-bottom: 45px;
-    text-align: center;
 }
 
 .contact-container {
@@ -977,7 +996,6 @@ footer {
 
     .nav-menu li {
         padding: 15px 25px;
-        text-align: right;
         font-weight: 400;
     }
 
