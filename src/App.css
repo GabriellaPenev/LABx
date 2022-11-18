@@ -667,7 +667,8 @@ li {
 
 /* OUR STRENGTHS */
 
-.strength-list li {
+.strength-list li, 
+.values li {
     line-height: 1.5rem;
 }
 
