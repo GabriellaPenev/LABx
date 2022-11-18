@@ -13,35 +13,38 @@ const Contact = () => {
 
     if (submit.succeeded) {
         return (
-            <>
                 <div className='wrapper'>
                     <Nav />
                     <FadeInSection>
-                    <h2>Get In Touch</h2>
+                        <h2>Get In Touch</h2>
+
                         <div className="contact-container">
-                            <img src={notebook} alt="A blank notebook with a plant" />
+                            <div className="contact-image">
+                                <img src={notebook} alt="A blank notebook with a plant" />
+
+                                <div className='instagram'>
+                                    <a href='https://www.instagram.com/labximpact/?hl=en' target='_blank' rel='noopener noreferrer'>
+                                        <FontAwesomeIcon icon={faInstagram} />
+                                    </a>
+                                </div>
+                            </div>
+
                             <p className='successful-submit'>Thank you for your message! We'll be in touch soon.</p>
-                        </div>
-                        <div>
-                            <a href='https://www.instagram.com/labximpact/?hl=en'>
-                                <FontAwesomeIcon icon={faInstagram} />
-                            </a>
                         </div>
                         <Footer />
                     </FadeInSection>
                 </div>
-            </>
+            
         )
     }
 
     return (
         <div className='wrapper'>
             <Nav />
-
             <FadeInSection>
-            <h2>Get In Touch</h2>
+                <h2>Get In Touch</h2>
                 <div className="contact-message">
-                    <p>We're looking to connect with arts organizations that seek to reimagine their operating policies to align with their core values. 
+                    <p>We're looking to connect with arts organizations that seek to reimagine their operating policies to align with their core values.
                         If you're interested in learning more about our work, or discussing how we can support your organization, drop us a line below.
                     </p>
                 </div>

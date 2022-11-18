@@ -681,6 +681,7 @@ li {
 .contact-container {
     display: flex;
     justify-content: space-between;
+    align-items: space-between;
 }
 
 .contact-image,
@@ -762,8 +763,8 @@ button {
 }
 
 .successful-submit {
-    font-size: 1rem;
-    padding-top: 20px;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding: 20px;
 }
 
 /* ERROR PAGE */
@@ -894,6 +895,11 @@ footer {
 
     .contact-message {
         margin-bottom: 20px;
+    }
+
+    .successful-submit {
+        padding-left: 0px;
+        padding-top: 0;
     }
 }
 
