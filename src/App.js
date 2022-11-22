@@ -6,7 +6,7 @@ import About from './components/About';
 import Strengths from './components/Strengths';
 import Contact from './components/Contact';
 import Error from './components/Error';
-import logo from './assets/labxlogo.png';
+import logo from './assets/labx-logo.png';
 
 function App() {
 
