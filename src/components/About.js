@@ -3,7 +3,7 @@ import FadeInSection from './FadeInSection';
 import Nav from './Nav';
 import Contact from './Contact'
 import Footer from './Footer';
-import graphicOne from '../assets/about-us-graphic1.png';
+import graphicOne from '../assets/about-us-graphic.png';
 
 const About = () => {
     return (

@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Contact from './Contact';
 import Footer from './Footer';
 import FadeInSection from './FadeInSection';
-import graphicTwo from '../assets/our-strengths-graphic1.png';
+import graphicTwo from '../assets/our-strengths-graphic.png';
 
 const Strengths = () => {
     return (
