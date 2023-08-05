@@ -638,17 +638,21 @@ li {
 
 /* BIO PAGE */
 
-.bio-container {
+.bios {
     display: flex;
+    justify-content: space-evenly;
 }
 
-.bio-container h3 {
+.bio-container h3, 
+.advisor-container h3 {
     text-align: center;
 }
 
-.bio-container li {
-    margin: 0 10px;
-    width: calc((100% / 3) - 20px);
+.advisor-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pronouns {
@@ -658,9 +662,15 @@ li {
     font-weight: 300;
 }
 
+.bio-text {
+    text-align: justify;
+    width: 400px;
+}
+
 .bio-pic {
     transition: 0.7s ease-in-out all;
     border: 0.1px solid #a08c8c;
+    width: 400px;
 }
 
 .kristina:hover {
@@ -675,9 +685,6 @@ li {
     border: 15px solid #789d919d;
 }
 
-.bio-text {
-    text-align: justify;
-}
 
 /* OUR STRENGTHS */
 
@@ -688,15 +695,32 @@ li {
 }
 
 .strengths-text {
-    width: 60%;
+    width: 50%;
 }
 
 .graphic-two {
     margin-left: 30px;
-    width: 40%;
+    width: 50%;
 }
 
-.strength-list li, 
+.past-projects-container {
+    width: 80%;
+}
+
+.bold {
+    font-weight: 400;
+}
+
+.link {
+    text-decoration: underline;
+    margin-bottom: 4px;
+}
+
+.description {
+    font-size: clamp(0.8rem, 2vw, 0.85rem);
+}
+
+.list li, 
 .values li {
     line-height: 1.5rem;
 }
@@ -928,6 +952,11 @@ footer {
         padding-left: 0px;
         padding-top: 0;
     }
+
+    .bio-text,    
+    .bio-pic {
+        width: 330px;
+    }
 }
 
 @media (max-width: 880px) {
@@ -939,11 +968,19 @@ footer {
     .wrapper {
         width: 95%;
     }
+
+    .bios {
+        flex-direction: column;
+    }
+
+    .bio-text,    
+    .bio-pic {
+        width: 500px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 680px) {
-
-
     .enter {
         width: 90px;
         top: 150px;
@@ -952,15 +989,6 @@ footer {
     .landing p {
         width: 90%;
     }
-    
-    .bio-container {
-        flex-direction: column;
-    }
-
-    .bio-container li {
-        width: 80%;
-        margin: 0 auto;
-    }
 
     .about-flex-container, 
     .strengths-flex-container {
@@ -968,7 +996,8 @@ footer {
         align-items: center;
     }
 
-    .about-text {
+    .about-text, 
+    .past-projects-container {
         width: 100%;
     }
 
@@ -1022,6 +1051,15 @@ footer {
         text-decoration: underline;
     }
 
+    .bios {
+        margin-top: 30px;
+    }
+
+    .bio-text,    
+    .bio-pic {
+        width: 360px;
+    }
+
     /* MOBILE NAV */
 
     .listPanel {
@@ -1069,6 +1107,10 @@ footer {
         transform: translateX(0);
     }
 
+    .listHidden {
+        visibility: hidden;
+    }
+    
     .bio-container li {
         width: 100%;
     }
@@ -1091,10 +1133,11 @@ footer {
 
 }
 
-/* @media (max-width: 400px) {
+@media (max-width: 420px) {
 
-    .graphic-one {
-        width: 100%;
-        margin: 0 auto;
+    .bio-text,    
+    .bio-pic {
+        width: 285px;
     }
-} */
+
+}
