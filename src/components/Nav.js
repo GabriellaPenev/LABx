@@ -4,7 +4,7 @@ import { useState } from 'react';
 // import About from './About';
 // import Contact from './Contact'
 // import Strengths from './Strengths';
-import Error from './Error';
+// import Error from './Error';
 import FocusLock from 'react-focus-lock';
 import NavMenu from './NavMenu';
 
