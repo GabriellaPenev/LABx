@@ -268,7 +268,9 @@ html {
 
 html {
     font-size: 125%;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     text-align: left;
     color: #3b3b3b;
     background-color: #a08c8c;
@@ -346,15 +348,20 @@ h1,
 h2,
 h3,
 li {
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     padding: 0;
     margin: 0;
-    font-weight: 300;
+    /* font-weight: 300; */
 }
 
 p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    /* font-weight: 300; */
 }
 
 h2 {
@@ -489,6 +496,7 @@ li {
     margin: 0 auto;
     position: inherit;
     z-index: 20;
+    font-weight: 400;
 }
 
 .leftCircle,
@@ -555,7 +563,7 @@ li {
 .arts p,
 .systems p,
 .change p {
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(0.8rem, 3vw, 1.1rem);
     color: rgb(194, 194, 194);
     transition: 0.7s ease-in-out all;
@@ -725,6 +733,22 @@ li {
     line-height: 1.5rem;
 }
 
+/* PROJECTS PAGE */
+
+.relative {
+    position: relative;
+}
+
+.italics {
+    font-style: italic;
+}
+.astrix {
+font-size: 0.7rem;
+position: absolute;
+bottom: -120px;
+left: 0;
+}
+
 /* CONTACT PAGE */
 
 .contact-message {
@@ -788,7 +812,9 @@ select,
 input,
 textarea {
     font-size: clamp(0.75rem, 3vw, 0.8rem);
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     border-radius: 15px;
     border: none;
     padding: 8px 15px;

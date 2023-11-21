@@ -33,6 +33,9 @@ const NavMenu = ( {navButton, setNavButton}) => {
                                 <Link to="/about">About</Link>
                             </li>
                             <li>
+                                <Link to="/projects">Current Projects</Link>
+                            </li>
+                            <li>
                                 <Link to="/bios">Who We Are</Link>
                             </li>
                             <li>

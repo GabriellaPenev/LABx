@@ -5,7 +5,7 @@ import { useState } from 'react';
 // import Contact from './Contact'
 // import Strengths from './Strengths';
 // import Error from './Error';
-import FocusLock from 'react-focus-lock';
+// import FocusLock from 'react-focus-lock';
 import NavMenu from './NavMenu';
 
 const Nav = () => {
@@ -15,7 +15,7 @@ const Nav = () => {
 
     return (
         <>
-            {navButton
+            {/* {navButton
                 ?
                 <FocusLock>
                     <NavMenu
@@ -23,12 +23,12 @@ const Nav = () => {
                         setNavButton={setNavButton}
                     />
                 </FocusLock>
-                :
+                : */}
                 <NavMenu
                     navButton={navButton}
                     setNavButton={setNavButton}
                 />
-            }
+            {/* } */}
         </>
     )
 
